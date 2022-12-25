@@ -1,0 +1,77 @@
+<br><div class="container" style="background-color: darkslategrey; border-radius: 20px; padding: 5%;">
+    <h2 align="center" style="color: white;">Registrar</h2>
+    <form [formGroup]="usu" (ngSubmit)="verificar(usu.value)">
+        <div class="row">
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+            </div>
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Primer Apellido" formControlName="prim_ape">
+            </div>
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Segundo Apellido" formControlName="seg_ape">
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Pais" formControlName="pais">
+            </div>
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Ciudad" formControlName="ciudad">
+            </div>
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="email" class="form-control" placeholder="Correo" formControlName="correo">
+            </div>
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="tel" class="form-control" placeholder="Telefono" formControlName="telefono">
+            </div>
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="tel" class="form-control" placeholder="Empleado/Empresa" formControlName="tipo">
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Grado Escolar" formControlName="grado">
+            </div>
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="number" class="form-control" placeholder="Edad" formControlName="edad">
+            </div> 
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Sexo" formControlName="sexo">
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Usuario" formControlName="usuario">
+            </div>
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="password" class="form-control" placeholder="Password" formControlName="pass">
+            </div>
+            <div class="col">
+                <label form="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Id de tu video" formControlName="id_video">
+            </div>
+            
+        </div>
+        <br>
+        <div align="center">
+            <button class="btn btn-primary" type="submit" style="margin: 10px;">Guardar</button>
+            
+            <button class="btn btn-primary" type="button" (click)="registrar(usu.value)">Eliminar</button>
+        </div>            
+    </form>
+</div>

@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row " >
+    <div class=" col-lg-3 d-flex align-items-stretch" *ngFor="let h of usuarios">
+      <div class="card mb-3" >
+        <div class="card-body">
+            <h5 class="card-title">Nombre: {{h.nombre}}</h5>
+            <p class="card-text">Edad: {{h.edad}} </p>
+            <p class="card-text">Pais/Ciudad: {{h.pais}}, {{h.ciudad}} </p>
+            <p class="card-text">Nivel Escolar: {{h.grado}} </p>
+            <p class="card-text">Correo: {{h.correo}} </p>
+            <p class="card-text">Tel: {{h.telefono}} </p>
+            <p class="card-text"><small class="text-muted">{{h.sinopsis}}</small></p>
+            <button button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="verVideo(h.id_video)">Video de presentacion</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe width="460" height="315" [src]=" video | youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="cerrar()">cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

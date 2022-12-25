@@ -1,0 +1,20 @@
+<br><div class="container" style="background-color: darkslategrey; border-radius: 20px; padding: 5%; width: 30%; height: 30%;">
+    <h2 align="center" style="color: white;">STWORK</h2>
+    <form [formGroup]="cuenta" (ngSubmit)="entrar(cuenta.value)">
+        <div class="col">
+            <label form="exampleFormControlInput1"></label>
+            <input type="text" class="form-control" placeholder="Usuario" formControlName="nombre">
+        </div>
+        <div class="col">
+            <label form="exampleFormControlInput1"></label>
+            <input type="password" class="form-control" placeholder="Password" formControlName="contra">
+        </div> 
+        <br>
+        <div align="center">
+            <button class="btn btn-primary" type="submit" style="margin: 10px;">Iniciar sesion</button><br>
+            
+            <button class="btn btn-primary" type="button" (click)="registrar()">Registrarte</button>
+        </div>
+            
+    </form>
+</div>
